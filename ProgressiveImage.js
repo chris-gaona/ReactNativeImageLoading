@@ -16,9 +16,26 @@ const styles = StyleSheet.create({
 
 export default class extends Component {
   render() {
+    const {
+      thumbnailSource,
+      source,
+      style,
+      ...restOfProps
+    } = this.props;
+
     return (
       <View style={styles.container}>
-        <Image {...this.props} />
+        <Image
+          {...restOfProps}
+          source={thumbnailSource}
+          style={style}
+          blurRadius={2}
+        />
+        <Image
+          {...restOfProps}
+          source={source}
+          style={[styles.imageOverlay, style]}
+        />
       </View>
     )
   }

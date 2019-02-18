@@ -17,6 +17,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <ProgressiveImage
+          thumbnailSource={{ uri: `https://images.pexels.com/photos/671557/pexels-photo-671557.jpeg?w=50&buster=${Math.random()}` }}
           source={{ uri: `https://images.pexels.com/photos/671557/pexels-photo-671557.jpeg?w=${width * 2}&buster=${Math.random()}` }}
           style={{ width, height: width }}
           resizeMode="cover"
