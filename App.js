@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Image, View, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
+import ProgressiveImage from './ProgressiveImage';
 
 const { width } = Dimensions.get('window')
 
@@ -15,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image
+        <ProgressiveImage
           source={{ uri: `https://images.pexels.com/photos/671557/pexels-photo-671557.jpeg?w=${width * 2}&buster=${Math.random()}` }}
           style={{ width, height: width }}
           resizeMode="cover"
